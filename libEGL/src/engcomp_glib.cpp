@@ -1,6 +1,11 @@
 #include "engcomp_glib.h"
 #include <algorithm>
 #include <cctype>
+#include <vector>
+#include <string>
+#include <sstream>
+
+#define DEBUG_ALT 105
 
 Uint32 rmask, gmask, bmask, amask;
 
@@ -16,17 +21,48 @@ Uint8 mouse_b;
 Uint32 limiteFramerate;
 Uint32 tempoAntes;
 
+SDL_Surface *painelDebug;
+
 int res_x; 
 int res_y;
 Uint32 clear_color;
+
+// depuração
 bool egl_debug=false;
-string msg_erro;
+struct debIt
+{
+	string chave;
+	string valor;
+};
+typedef struct debIt debugItem;
+vector<debugItem*> debugMessages;
+
 
 // setup das threads SDL
 bool kill_threads;
 SDL_Thread* t_eventos;
 
 #include "fonte.h"
+
+SDL_Surface *alphaRect(int width, int height, Uint8 red, Uint8 green, Uint8 blue)
+{
+	SDL_Surface *surface, *newImage;
+
+	surface = SDL_CreateRGBSurface(SDL_SWSURFACE, width, height, 32, rmask, gmask, bmask, amask);
+
+	if (surface == NULL) return NULL;
+
+	newImage = SDL_DisplayFormat(surface);
+
+	SDL_FillRect(newImage, NULL, SDL_MapRGB(newImage->format, red,
+		green, blue));
+
+	SDL_SetAlpha(newImage, SDL_SRCALPHA|SDL_RLEACCEL, 164);
+
+	SDL_FreeSurface(surface);
+
+	return newImage;
+}
 
 bool egl_inicializar(int w, int h, bool janela)
 {
@@ -84,8 +120,12 @@ bool egl_inicializar(int w, int h, bool janela)
 	kill_threads = false;
 	t_eventos = SDL_CreateThread(egl_processa_eventos,NULL);
 
+	painelDebug = alphaRect(res_x,DEBUG_ALT,0,0,0);
+
 	return true;
 }
+
+
 
 void egl_finalizar()
 {
@@ -97,6 +137,13 @@ void egl_finalizar()
 	Mix_CloseAudio();
 	while(Mix_Init(0)) Mix_Quit();
 	SDL_Quit();
+
+	debugItem* temp = NULL;
+	for(int i = 0; i < debugMessages.size(); i++)
+	{
+		temp = debugMessages[i];
+		delete temp;
+	}
 }
 
 int  egl_processa_eventos(void* param)
@@ -115,12 +162,120 @@ void egl_limite_framerate(unsigned int maxFramerate) // frames por segundo
 	limiteFramerate = (Uint32)((1.0/maxFramerate)*1000.0);
 }
 
+// egl4
+void processaDebug()
+{
+	if(!egl_debug) return;
+	if(debugMessages.size() == 0) return;
+
+	SDL_Rect rect;
+	rect.x = 0;
+	rect.y = 0;
+	rect.w = res_x;
+	rect.h = DEBUG_ALT;
+	SDL_BlitSurface(painelDebug,NULL,tela,&rect);
+
+	egl_texto("libEGL 4 - Painel de DEBUG",2,2,255,255,255);
+
+	int debY = 14;
+	debugItem* temp = NULL;
+	for(int i = 0; i < debugMessages.size(); i++)
+	{
+		if(i == 8) 
+		{
+			egl_texto("...",8,debY,164,164,164);
+			break;
+		}
+		temp = debugMessages[i];
+		egl_texto(temp->chave,8,debY,164,164,164);
+		egl_texto(temp->valor,150,debY,164,164,164);
+		debY += 10;
+	}
+
+}
+
+// egl4
+void egl_depurar(string chave, string valor)
+{
+	egl_debug = true;
+	debugItem* deb = NULL;
+	debugItem* temp = NULL;
+	for(int i = 0; i < debugMessages.size(); i++)
+	{
+		temp = debugMessages[i];
+		if(temp->chave == chave) deb = temp;
+	}
+	if(deb == NULL)
+	{
+		deb = new debugItem;
+		deb->chave = chave;
+		deb->valor = valor;
+		debugMessages.push_back(deb);
+	}
+	else
+	{
+		deb->valor = valor;
+	}
+}
+
+// egl4
+void egl_depurar(string chave, int valor)
+{
+	string temp;
+	stringstream conv;
+	conv << valor;
+	conv >> temp;
+	egl_depurar(chave,temp);
+}
+
+// egl4
+void egl_depurar(string chave, double valor)
+{
+	string temp;
+	stringstream conv;
+	conv << valor;
+	conv >> temp;
+	egl_depurar(chave,temp);
+}
+
+// egl4
+void egl_depurar(string chave, float valor)
+{
+	string temp;
+	stringstream conv;
+	conv << valor;
+	conv >> temp;
+	egl_depurar(chave,temp);
+}
+
+// egl4
+void egl_depurar(string chave, char valor)
+{
+	string temp;
+	stringstream conv;
+	conv << valor;
+	conv >> temp;
+	egl_depurar(chave,temp);
+}
+
+// egl4
+void egl_erro(string mensagem)
+{
+	egl_debug = true;
+	debugItem* deb;
+	deb = new debugItem;
+	deb->chave = "ERRO";
+	deb->valor = mensagem;
+	debugMessages.push_back(deb);
+}
+
 void egl_desenha_frame(bool limpa)
 {
 	if(!egl_init) return;
-    if(egl_debug) egl_texto(msg_erro.c_str(),0,0);
 
 	SDL_PumpEvents();
+
+	processaDebug();
 
 	int32_t delay = (tempoAntes + limiteFramerate) - SDL_GetTicks();
 	if(delay <= 0) 
@@ -156,11 +311,6 @@ void egl_retangulo(int x1,int y1, int x2,int y2, int vermelho, int verde, int az
 void egl_sleep(int milisec)
 {
 	SDL_Delay(milisec);
-}
-
-void egl_erro(string mensagem)
-{
-	msg_erro += (" " + mensagem);
 }
 
 void egl_texto(string txt, int x, int y, int cR, int cG, int cB)

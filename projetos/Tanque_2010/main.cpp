@@ -28,6 +28,10 @@ int main(int argc, char* argv[])
 		mapa.desenha();
 		tanque.desenha_rotacionado(x,y,rot);
 
+		//egl_depurar("X",x);
+		//egl_depurar("Y",y);
+		//egl_depurar("Rotacao",rot);
+
 		if(key[SDLK_LEFT])
 		{
 			rot+=vel;

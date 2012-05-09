@@ -32,7 +32,7 @@ extern int res_x;
 extern int res_y;
 extern Uint32 clear_color;
 extern bool egl_debug;
-extern string msg_erro;
+
 
 bool EGL_CALL_CONV egl_inicializar(int w, int h, bool janela = false );
 
@@ -49,6 +49,12 @@ int EGL_CALL_CONV egl_processa_eventos(void* param);
 void EGL_CALL_CONV egl_sleep(int milisec);
 
 void EGL_CALL_CONV egl_erro(string mensagem);
+
+void EGL_CALL_CONV egl_depurar(string chave, string valor);
+void EGL_CALL_CONV egl_depurar(string chave, int valor);
+void EGL_CALL_CONV egl_depurar(string chave, double valor);
+void EGL_CALL_CONV egl_depurar(string chave, float valor);
+void EGL_CALL_CONV egl_depurar(string chave, char valor);
 
 void EGL_CALL_CONV egl_linha(int x1,int y1, int x2,int y2, int vermelho, int verde, int azul);
 

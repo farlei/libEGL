@@ -3,6 +3,7 @@
 /*
 Biblioteca de Desenvolvimento de Jogos do Curso de Engenharia da Computação da UNISINOS
 by Farlei J. Heinen (30/05/2006) - farleih@gmail.com
+versão 4 - 09/05/2012
 */
 
 #include "library_version.h"
@@ -25,6 +26,8 @@ extern int mouse_x;
 extern int mouse_y;
 extern Uint8 mouse_b;
 
+extern Uint32 limiteFramerate;
+
 extern int res_x; 
 extern int res_y;
 extern Uint32 clear_color;
@@ -34,6 +37,8 @@ extern string msg_erro;
 bool EGL_CALL_CONV egl_inicializar(int w, int h, bool janela = false );
 
 void EGL_CALL_CONV egl_finalizar();
+
+void EGL_CALL_CONV egl_limite_framerate(unsigned int maxFramerate);
 
 void EGL_CALL_CONV egl_desenha_frame(bool limpa = true);
 

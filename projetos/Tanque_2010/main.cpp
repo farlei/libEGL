@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 	float rot = 0;
 	float x = 300;
 	float y = 300;
-	float vel = 0.2;
+	float vel = 1.2;
 	float rad;
 	const float pi180 = (3.1416/180);
 

@@ -13,6 +13,9 @@ int mouse_x;
 int mouse_y;
 Uint8 mouse_b;
 
+Uint32 limiteFramerate;
+Uint32 tempoAntes;
+
 int res_x; 
 int res_y;
 Uint32 clear_color;
@@ -56,6 +59,8 @@ bool egl_inicializar(int w, int h, bool janela)
 	///////
 
 	// Video
+	tempoAntes = SDL_GetTicks();
+	limiteFramerate = (Uint32)((1.0/60.0)*1000.0); // 60 frames por segundo
 	if(!janela)
 	{
 		tela = SDL_SetVideoMode( w, h, 0, SDL_SWSURFACE | SDL_DOUBLEBUF | SDL_FULLSCREEN);
@@ -104,6 +109,12 @@ int  egl_processa_eventos(void* param)
 	return 1;
 }
 
+// egl4
+void egl_limite_framerate(unsigned int maxFramerate) // frames por segundo
+{
+	limiteFramerate = (Uint32)((1.0/maxFramerate)*1000.0);
+}
+
 void egl_desenha_frame(bool limpa)
 {
 	if(!egl_init) return;
@@ -111,9 +122,14 @@ void egl_desenha_frame(bool limpa)
 
 	SDL_PumpEvents();
 
-	SDL_Flip(tela);
-	if(limpa) 
-      SDL_FillRect(tela, NULL, clear_color);
+	int32_t delay = (tempoAntes + limiteFramerate) - SDL_GetTicks();
+	if(delay <= 0) 
+	{
+		SDL_Flip(tela);
+		if(limpa) 
+		  SDL_FillRect(tela, NULL, clear_color);
+		tempoAntes = SDL_GetTicks();
+	}
 }
 
 void egl_pixel(int x,int y, int vermelho, int verde, int azul)

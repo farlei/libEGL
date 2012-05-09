@@ -63,7 +63,7 @@ bool egl_inicializar(int w, int h, bool janela)
 	else
 	{
 		tela = SDL_SetVideoMode( w, h, 0, SDL_SWSURFACE | SDL_DOUBLEBUF );
-		SDL_WM_SetCaption( "libEGL3", 0 );
+		SDL_WM_SetCaption( "libEGL", 0 );
 	}
 	
 	res_x = w; res_y = h;

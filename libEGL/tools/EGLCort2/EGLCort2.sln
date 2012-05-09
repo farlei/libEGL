@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EGLCort2", "EGLCort2.csproj", "{9141C25D-ABB6-493D-9C62-7CE8E2F7D4D5}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{EC82C928-8A12-47F8-B464-795AC17FBC8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9141C25D-ABB6-493D-9C62-7CE8E2F7D4D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9141C25D-ABB6-493D-9C62-7CE8E2F7D4D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9141C25D-ABB6-493D-9C62-7CE8E2F7D4D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9141C25D-ABB6-493D-9C62-7CE8E2F7D4D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC82C928-8A12-47F8-B464-795AC17FBC8E}.Debug|Any CPU.ActiveCfg = Debug
+		{EC82C928-8A12-47F8-B464-795AC17FBC8E}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -8,6 +8,7 @@ using namespace std;
 int main(int argc, char* argv[])
 {
 	egl_inicializar(800,600,true);
+	egl_limite_framerate(30); // limita em 30 frames por segundo (o padrão é de 60 fps)
 
 	imagem tanque;
 	tanque.carregar("tanque.png");
@@ -15,11 +16,10 @@ int main(int argc, char* argv[])
 	TileMap mapa;
 	mapa.inicializa("mapa.txt");
 
-
 	float rot = 0;
 	float x = 300;
 	float y = 300;
-	float vel = 1.2;
+	float vel = 0.6;
 	float rad;
 	const float pi180 = (3.1416/180);
 
@@ -28,9 +28,11 @@ int main(int argc, char* argv[])
 		mapa.desenha();
 		tanque.desenha_rotacionado(x,y,rot);
 
-		//egl_depurar("X",x);
-		//egl_depurar("Y",y);
-		//egl_depurar("Rotacao",rot);
+		// comandos que habilitam o painel de Debug
+		// e atualizam os valores
+		egl_depurar("X",x);
+		egl_depurar("Y",y);
+		egl_depurar("Rotacao Tanque",rot);
 
 		if(key[SDLK_LEFT])
 		{

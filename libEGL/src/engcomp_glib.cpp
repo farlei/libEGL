@@ -299,6 +299,8 @@ void egl_linha(int x1,int y1, int x2,int y2, int vermelho, int verde, int azul)
 	if(!egl_init) return;
 
 	lineRGBA(tela,x1,y1,x2,y2,vermelho, verde, azul,255);
+
+
 }
 
 void egl_retangulo(int x1,int y1, int x2,int y2, int vermelho, int verde, int azul)

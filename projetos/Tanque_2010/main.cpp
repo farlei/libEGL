@@ -56,6 +56,12 @@ int main(int argc, char* argv[])
 			y -= -sin(rad) * vel;
 		}
 		
+		// linha com espessura (último parametro indica a espessura)
+		egl_linha(10,550,790,550,0,0,0,5);
+
+		// desenha um retangulo com as bordas arredondadas
+		egl_retangulo_arredondado(10,560,70,590,0,0,0,200);
+
 		egl_desenha_frame();
 	}
 

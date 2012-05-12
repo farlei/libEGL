@@ -57,8 +57,10 @@ void EGL_CALL_CONV egl_depurar(string chave, float valor);
 void EGL_CALL_CONV egl_depurar(string chave, char valor);
 
 void EGL_CALL_CONV egl_linha(int x1,int y1, int x2,int y2, int vermelho, int verde, int azul);
+void EGL_CALL_CONV egl_linha(int x1,int y1, int x2,int y2, int vermelho, int verde, int azul, int largura);
 
 void EGL_CALL_CONV egl_retangulo(int x1,int y1, int x2,int y2, int vermelho, int verde, int azul);
+void EGL_CALL_CONV egl_retangulo_arredondado(int x1,int y1, int x2,int y2, int vermelho, int verde, int azul, int alpha = 255);
 
 void EGL_CALL_CONV egl_texto(string txt, int x, int y, int cR=255, int cG=255, int cB=255);
 

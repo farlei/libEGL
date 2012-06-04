@@ -21,4 +21,6 @@ Novidades na versão 4
 
 * sistema para limitar o framerate, possibilitando que o jogo tenha uma velocidade uniforme em diferentes computadores. Por padrão o framerate é limitado em 60 frames por segundo.
 * novos comandos para permitir a depuração de variáveis: egl_depurar() 
- 
+* sistema de interface gráfica (com botões e menus)
+* desenho de retângulos com os cantos arredondados
+* desenho de linhas com possibilidade de determinar a espessura

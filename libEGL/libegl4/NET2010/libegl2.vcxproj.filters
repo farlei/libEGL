@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Tiles.cpp">
+      <Filter>Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TileMap.cpp">
+      <Filter>Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\TileCache.cpp">
+      <Filter>Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\fonte.cpp">
+      <Filter>Midias</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\imagem.cpp">
+      <Filter>Midias</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\musica.cpp">
+      <Filter>Midias</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\som.cpp">
+      <Filter>Midias</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SDL\src\SDL_collide.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\engcomp_glib.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Botao.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ComponenteBase.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Interface.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ItemMenu.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\TileEngine.h">
+      <Filter>Tiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\fonte.h">
+      <Filter>Midias</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\library_version.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engcomp_glib.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Botao.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ComponenteBase.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Interface.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ItemMenu.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{dc222021-7adf-4dab-820b-3911b56d94a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tiles">
+      <UniqueIdentifier>{85d38337-f3d1-421a-8f16-0bc328efacd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Midias">
+      <UniqueIdentifier>{9c0595a4-928c-4123-b92a-1a4339b8f082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{87245075-77f6-46e8-b633-49ed2a73335d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -269,9 +269,9 @@ void egl_erro(string mensagem)
 	debugMessages.push_back(deb);
 }
 
-void egl_desenha_frame(bool limpa)
+int32_t egl_desenha_frame(bool limpa)
 {
-	if(!egl_init) return;
+	if(!egl_init) return 0;
 
 	SDL_PumpEvents();
 
@@ -281,10 +281,10 @@ void egl_desenha_frame(bool limpa)
 	if(delay <= 0) 
 	{
 		SDL_Flip(tela);
-		if(limpa) 
-		  SDL_FillRect(tela, NULL, clear_color);
 		tempoAntes = SDL_GetTicks();
 	}
+	if(limpa) SDL_FillRect(tela, NULL, clear_color);
+	return delay;
 }
 
 void egl_pixel(int x,int y, int vermelho, int verde, int azul)

@@ -48,3 +48,19 @@ void fonte::desenha_texto(string txt, int x, int y, int vermelho, int verde, int
 	SDL_BlitSurface(text_surface,NULL,tela,&offset);
 	SDL_FreeSurface(text_surface);
 }
+
+void fonte::medir_texto(string txt, int* tw, int* th)
+{
+	if(!egl_init) return;
+
+	SDL_Color color={255,255,255};
+	SDL_Surface *text_surface;
+	text_surface=TTF_RenderText_Blended(font,txt.c_str(),color); 
+
+	*tw = text_surface->w;
+	*th = text_surface->h;
+	
+	SDL_FreeSurface(text_surface);
+}
+
+

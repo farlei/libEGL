@@ -13,6 +13,8 @@ versão 4 - 09/05/2012
 
 using namespace std;
 
+
+
 #define EGL_CALL_CONV _cdecl
 
 extern Uint32 rmask, gmask, bmask, amask;
@@ -40,7 +42,7 @@ void EGL_CALL_CONV egl_finalizar();
 
 void EGL_CALL_CONV egl_limite_framerate(unsigned int maxFramerate);
 
-void EGL_CALL_CONV egl_desenha_frame(bool limpa = true);
+int32_t EGL_CALL_CONV egl_desenha_frame(bool limpa = true);
 
 void EGL_CALL_CONV egl_pixel(int x,int y, int vermelho, int verde, int azul);
 
@@ -83,6 +85,7 @@ public:
 	bool carregar(string arquivo,int size=16);
 	bool carregar_mem(unsigned char mem[],int memsize, int size=16);
 	void desenha_texto(string txt, int x, int y, int vermelho=255, int verde=255, int azul=255);
+	void medir_texto(string txt, int* tw, int* th);
 };
 
 
@@ -189,6 +192,10 @@ private:
 	std::string nomeArquivo;
 };
 
-
-
 #include "TileEngine.h"
+
+// interface 
+#include "ComponenteBase.h"
+#include "Botao.h"
+#include "ItemMenu.h"
+#include "Interface.h"

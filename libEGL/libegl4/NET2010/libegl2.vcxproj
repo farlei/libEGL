@@ -82,9 +82,13 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\Botao.cpp" />
+    <ClCompile Include="..\..\src\ComponenteBase.cpp" />
     <ClCompile Include="..\..\src\engcomp_glib.cpp" />
     <ClCompile Include="..\..\src\fonte.cpp" />
     <ClCompile Include="..\..\src\imagem.cpp" />
+    <ClCompile Include="..\..\src\Interface.cpp" />
+    <ClCompile Include="..\..\src\ItemMenu.cpp" />
     <ClCompile Include="..\..\src\musica.cpp" />
     <ClCompile Include="..\..\SDL\src\SDL_collide.cpp" />
     <ClCompile Include="..\..\src\som.cpp" />
@@ -93,8 +97,12 @@
     <ClCompile Include="..\..\src\Tiles.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\include\Botao.h" />
+    <ClInclude Include="..\..\include\ComponenteBase.h" />
     <ClInclude Include="..\..\include\engcomp_glib.h" />
     <ClInclude Include="..\..\include\fonte.h" />
+    <ClInclude Include="..\..\include\Interface.h" />
+    <ClInclude Include="..\..\include\ItemMenu.h" />
     <ClInclude Include="..\..\include\library_version.h" />
     <ClInclude Include="..\..\include\TileEngine.h" />
   </ItemGroup>

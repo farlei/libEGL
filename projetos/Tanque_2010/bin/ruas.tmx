@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="12" height="9" tilewidth="64" tileheight="64">
  <tileset firstgid="1" name="road1" tilewidth="64" tileheight="64">
-  <image source="Docs/2D_Shooter_ArtPack/2D_ShooterPack/Tilesets/road1.png" width="256" height="256"/>
+  <image source="road1.png" width="256" height="256"/>
  </tileset>
  <tileset firstgid="17" name="crater1" tilewidth="64" tileheight="64">
-  <image source="Docs/2D_Shooter_ArtPack/2D_ShooterPack/Tilesets/crater1.png" width="256" height="256"/>
+  <image source="crater1.png" width="256" height="256"/>
  </tileset>
  <tileset firstgid="33" name="colide" tilewidth="64" tileheight="64">
   <image source="colide.png" width="64" height="64"/>
+  <tile id="0">
+   <properties>
+    <property name="egl_teste" value=""/>
+    <property name="egl_walk" value="1"/>
+   </properties>
+  </tile>
  </tileset>
  <layer name="fundo" width="12" height="9">
   <data encoding="base64" compression="zlib">
@@ -19,7 +25,7 @@
    eJwTZqANkKCRueQCcTLliAGSQCwFZQsCsRAB9bJALAdliwKxGAl2AQCadAEW
   </data>
  </layer>
- <layer name="egl_colide" width="12" height="9" opacity="0.51">
+ <layer name="egl_colide" width="12" height="9" opacity="0.35">
   <data encoding="base64" compression="zlib">
    eJxTZGBgUMSBGXCI4QO4zMJlDqXqaQ1o7X5C6tEBAAR5B94=
   </data>

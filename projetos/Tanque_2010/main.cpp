@@ -8,7 +8,7 @@ using namespace std;
 int main(int argc, char* argv[])
 {
 	egl_inicializar(800,600,true);
-	egl_limite_framerate(120); // limita em 30 frames por segundo (o padrão é de 60 fps)
+	egl_limite_framerate(120); // limita em 120 frames por segundo (o padrão é de 60 fps)
 
 	imagem tanque;
 	tanque.carregar("tanque.png");
@@ -16,6 +16,9 @@ int main(int argc, char* argv[])
 	TileMap mapa;
 	//mapa.inicializa("mapa.txt");
 	mapa.inicializaJSON("ruas.json","fundo");
+
+	TileMap crateras;
+	crateras.inicializaJSON("ruas.json","crateras");
 
 	float rot = 0;
 	float x = 300;
@@ -51,6 +54,7 @@ int main(int argc, char* argv[])
 	while(!key[SDLK_ESCAPE])
 	{
 		mapa.desenha();
+		crateras.desenha();
 		tanque.desenha_rotacionado(x,y,rot);
 
 		gui.desenha();

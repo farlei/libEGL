@@ -129,11 +129,10 @@ bool TileMap::inicializaJSON(string arq, string nomeLayer)
 			int tile_atual = tileArray[pos].asInt();
 			int tile_col = 0;
 
-			if(tile_atual == 0) tile_atual = -1;
 			mapa[posX][posY] = new Tiles();
 			mapa[posX][posY]->posx = posX;
 			mapa[posX][posY]->posy = posY;
-			mapa[posX][posY]->setTile(tile_atual+deltaGID,lx,ly);
+			mapa[posX][posY]->setTile(tile_atual != 0 ? tile_atual+deltaGID : -1 ,lx,ly);
 
 			// colisao: usando layer especial (egl_colide)
 			if(colisao) tile_col = colArray[pos].asInt();

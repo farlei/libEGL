@@ -10,6 +10,7 @@ versão 4 - 09/05/2012
 #include <string>
 #include <vector>
 #include <list>
+#include "json/json.h"
 
 using namespace std;
 

@@ -89,6 +89,7 @@
     <ClCompile Include="..\..\src\imagem.cpp" />
     <ClCompile Include="..\..\src\Interface.cpp" />
     <ClCompile Include="..\..\src\ItemMenu.cpp" />
+    <ClCompile Include="..\..\src\jsoncpp.cpp" />
     <ClCompile Include="..\..\src\musica.cpp" />
     <ClCompile Include="..\..\SDL\src\SDL_collide.cpp" />
     <ClCompile Include="..\..\src\som.cpp" />

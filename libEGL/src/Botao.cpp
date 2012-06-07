@@ -37,7 +37,9 @@ enum EGL_EVENTOS Botao::processaEventos()
 		{
 			estado = 1;
 			pressionado = 10;
-			return EGL_CLIQUE;
+			if( mouse_b & SDL_BUTTON(2)) return EGL_CLIQUE_MEIO;
+			if( mouse_b & SDL_BUTTON(3)) return EGL_CLIQUE_DIR;
+			return EGL_CLIQUE_ESQ;
 		}
 		estado = 2;
 		return EGL_HOVER;

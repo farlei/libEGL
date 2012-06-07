@@ -14,7 +14,8 @@ int main(int argc, char* argv[])
 	tanque.carregar("tanque.png");
 
 	TileMap mapa;
-	mapa.inicializa("mapa.txt");
+	//mapa.inicializa("mapa.txt");
+	mapa.inicializaJSON("ruas.json","fundo");
 
 	float rot = 0;
 	float x = 300;
@@ -36,6 +37,16 @@ int main(int argc, char* argv[])
 
 	int troca = 1;
 
+
+	imagem explosao;
+	explosao.carregar("explosao.png",0,0,32,32);
+	explosao.carregar("explosao.png",32,0,32,32);
+	explosao.carregar("explosao.png",32*2,0,32,32);
+	explosao.carregar("explosao.png",32*3,0,32,32);
+	explosao.carregar("explosao.png",32*4,0,32,32);
+	explosao.carregar("explosao.png",32*5,0,32,32);
+	explosao.carregar("explosao.png",32*6,0,32,32);
+
 	int delay = 0;
 	while(!key[SDLK_ESCAPE])
 	{
@@ -43,8 +54,11 @@ int main(int argc, char* argv[])
 		tanque.desenha_rotacionado(x,y,rot);
 
 		gui.desenha();
-		int btID = gui.verificaEventos();
+		int btID = gui.verificaEventos(EGL_CLIQUE_DIR);
 		if(btID == 0) troca *= (-1);
+
+		int sair = gui.verificaEventosJanela(EGL_SAIR);
+		if(sair == 1) break;
 
 		// comandos que habilitam o painel de Debug
 		// e atualizam os valores
@@ -81,6 +95,8 @@ int main(int argc, char* argv[])
 
 		// desenha um retangulo com as bordas arredondadas
 		egl_retangulo_arredondado(10,560,70,590,0,0,0,200);
+
+		explosao.desenha(400,300);
 
 		delay = egl_desenha_frame();
 	}

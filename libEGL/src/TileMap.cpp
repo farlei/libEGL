@@ -4,6 +4,8 @@
 #include <vector>
 #include <fstream>
 #include <math.h>
+#include <algorithm>
+#include <cctype>
 #include "engcomp_glib.h"
 
 using namespace std;
@@ -18,6 +20,7 @@ using namespace std;
 
 TileMap::TileMap(void)
 {
+	deltaGID = 0;
 	px = py = 0;
 	path = false;
 	cutcor = false;
@@ -37,6 +40,116 @@ TileMap::TileMap(void)
 TileMap::~TileMap(void)
 {
 }
+
+
+
+bool TileMap::inicializaJSON(string arq, string nomeLayer)
+{
+	Json::Value root;
+	Json::Reader reader;
+	ifstream inputArq(arq);
+	bool ok = reader.parse(inputArq,root);
+	if(!ok)
+	{
+		egl_erro("TileMap: Erro carregando formato JSON");
+		return false;
+	}
+
+	deltaGID = iSC->getNumTiles()-1;
+
+	lx = root.get("tilewidth",-1).asInt();
+	ly = root.get("tileheight",-1).asInt();
+	if((lx < 0) || (ly < 0))
+	{
+		egl_erro("TileMap: erro no JSON (tamanho do tile)");
+		return false;
+	}
+
+	const Json::Value layers = root["layers"];
+	bool achou = false;
+	Json::Value layerAtivo;
+	Json::Value layerColide;
+	bool colisao = false;
+	for(int i = 0; i < layers.size(); i++)
+	{
+		if(layers[i].get("name","").asString() == nomeLayer)
+		{
+			achou = true;
+			layerAtivo = layers[i];
+		}
+		if(layers[i].get("name","").asString() == "egl_colide")
+		{
+			colisao = true;
+			layerColide = layers[i];
+		}
+	}
+	if(!achou)
+	{
+		egl_erro("TileMap: nome do layer nao foi encontrado");
+		return false;
+	}
+
+	const Json::Value tilesets = root["tilesets"];
+	for(int i = 0; i < tilesets.size(); i++)
+	{
+		int imgW = tilesets[i].get("imagewidth",0).asInt();
+		int imgH = tilesets[i].get("imageheight",0).asInt();
+		string imgName = tilesets[i].get("image","").asString();
+
+		int xSize = imgW / lx;
+		int ySize = imgH / ly;
+
+		for(int posY = 0; posY < ySize; posY++)
+		{
+			for(int posX = 0; posX < xSize; posX++)
+			{
+				iSC->carregar(imgName,lx*posX,ly*posY,lx,ly);
+			}
+		}
+	}
+
+	tx = layerAtivo["width"].asInt();
+	ty = layerAtivo["height"].asInt();
+
+	mapaW = tx*lx;
+	mapaH = ty*ly;
+
+	mapa.resize(tx);
+	for(int i = 0; i < tx; i++)
+		mapa[i].resize(ty);
+
+	int pos = 0;
+	Json::Value tileArray = layerAtivo["data"];
+	Json::Value colArray;
+	if(colisao) colArray = layerColide["data"];
+	for(int posY = 0; posY < ty; posY++)
+	{
+		for(int posX = 0; posX < tx; posX++)
+		{
+			int tile_atual = tileArray[pos].asInt();
+			int tile_col = 0;
+
+			if(tile_atual == 0) tile_atual = -1;
+			mapa[posX][posY] = new Tiles();
+			mapa[posX][posY]->posx = posX;
+			mapa[posX][posY]->posy = posY;
+			mapa[posX][posY]->setTile(tile_atual+deltaGID,lx,ly);
+
+			// colisao: usando layer especial (egl_colide)
+			if(colisao) tile_col = colArray[pos].asInt();
+			if(tile_col != 0) mapa[posX][posY]->setWalk(false);
+			else mapa[posX][posY]->setWalk(true);
+
+
+			pos++;
+		}
+	}
+
+
+	return true;
+}
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 /// <summary>	Inicializa. </summary>
@@ -95,7 +208,7 @@ bool TileMap::inicializa(string arq)
 			mapa[x][y] = new Tiles();
 			mapa[x][y]->posx = x;
 			mapa[x][y]->posy = y;
-			mapa[x][y]->setTile(tile_atual,larg,alt);
+			mapa[x][y]->setTile(tile_atual+deltaGID,larg,alt);
 		}
 	}
 	

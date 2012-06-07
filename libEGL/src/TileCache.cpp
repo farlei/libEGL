@@ -32,11 +32,11 @@ void TileCache::desenhar(int index,int x, int y)
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 /// <summary>	Carregar. </summary>
 ///
-/// <remarks>	Tulio, 24/05/2010. </remarks>
+/// <remarks>	Farlei, 06/06/2012. </remarks>
 ///
 /// <param name="arquivo">	Nome do arquivo. </param>
 ///
-/// <returns>	Quantidade de tiles armazenados, -1 se falha. </returns>
+/// <returns>	Indice do novo tile, -1 se falha. </returns>
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 int TileCache::carregar(string arquivo)
@@ -49,6 +49,27 @@ int TileCache::carregar(string arquivo)
 
 	temp = new imagem();
 	ret = temp->carregar(arquivo);
+
+	if(ret)
+	{
+		vetor.push_back(temp);
+		mapa.push_back(arquivo);
+		return vetor.size()-1;
+	}
+	else
+	{
+		delete temp;
+		return -1;
+	}
+}
+
+int  TileCache::carregar(string arquivo, int px, int py, int largura, int altura)
+{
+	imagem* temp;
+	bool ret;
+
+	temp = new imagem();
+	ret = temp->carregar(arquivo,px,py,largura,altura);
 
 	if(ret)
 	{

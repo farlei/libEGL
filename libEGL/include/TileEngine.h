@@ -22,6 +22,7 @@ class TileCache
 public:
 	void desenhar(int index,int x, int y);
 	int carregar(string arquivo);
+	int carregar(string arquivo, int px, int py, int largura, int altura);
 	int localizar(string arquivo);
 	imagem* getImagem(int index);
 	int getNumTiles();
@@ -116,10 +117,13 @@ private:
 
 	int mapaW, mapaH; // largura e altura do mapa em pixels
 
+	int deltaGID; // compatibilidade com mapas JSON do Tiled
+
 public:
 	TileMap(void);
 	~TileMap(void);
 	bool inicializa(string arq);
+	bool inicializaJSON(string arq, string nomeLayer);
 	void desenha();
 	void desenha_minimapa(int _x, int _y);
 	void setPos(int _x, int _y);

@@ -145,7 +145,9 @@ bool imagem::carregar(string arquivo, bool global)
 	}
 
 	SDL_SetColorKey(btemp,SDL_SRCCOLORKEY,SDL_MapRGB(tela->format, 255, 0, 255) );
+	SDL_Surface* remove = btemp;
 	btemp = SDL_DisplayFormatAlpha(btemp);
+	SDL_FreeSurface(remove);
 
 	bmp.push_back(btemp);
 
@@ -166,20 +168,20 @@ bool imagem::carregar(string arquivo, int x, int y, int largura, int altura)
 	SDL_Surface* bmp_temp;
 
 	bmp_temp = IMG_Load(arquivo.c_str());
+	SDL_SetAlpha(bmp_temp,0,0);
 
 	if(!bmp_temp) 
 	{
 		index--;
 		string s_err = "Erro carreg. arq: " + arquivo;
 		egl_erro(s_err);
-		egl_debug = true;
 		falha = true;
 		falha_str = s_err;
 		return false;
 	}
 
-	btemp = SDL_CreateRGBSurface(SDL_SWSURFACE, largura, altura, bmp_temp->format->BitsPerPixel, rmask, gmask, bmask, amask);
-
+	btemp = SDL_CreateRGBSurface(SDL_SWSURFACE, largura, altura, 32, rmask, gmask, bmask, amask);
+	
 	SDL_Rect r_orig;
 	r_orig.x = x;
 	r_orig.y = y;
@@ -190,7 +192,9 @@ bool imagem::carregar(string arquivo, int x, int y, int largura, int altura)
 	SDL_FreeSurface(bmp_temp);
 
 	SDL_SetColorKey(btemp,SDL_SRCCOLORKEY,SDL_MapRGB(tela->format, 255, 0, 255) );
+	SDL_Surface* remove = btemp;
 	btemp = SDL_DisplayFormatAlpha(btemp);
+	SDL_FreeSurface(remove);
 
 	bmp.push_back(btemp);
 

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="EditorMapa2D">
+</Property><Property Name="Solution File" Value="C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\EditorMapa2D.sln">
+</Property><Property Name="User Options File" Value="C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\EditorMapa2D.suo">
+</Property><Property Name="Date" Value="terça-feira, 5 de junho de 2012">
+</Property><Property Name="Time" Value="21:38">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="EditorMapa2D.sln" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\EditorMapa2D.sln">
+</Event><Event ErrorLevel="0" Project="" Source="EditorMapa2D.suo" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\EditorMapa2D.suo">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="EditorMapa2D.csproj" Description="Project file successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\EditorMapa2D.csproj">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="frmEvent.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\frmEvent.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="frmEvent.Designer.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\frmEvent.Designer.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="frmSobre.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\frmSobre.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="frmSobre.Designer.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\frmSobre.Designer.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Project.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Project.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="dsControle.Designer.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\dsControle.Designer.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="frmNewProject.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\frmNewProject.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="frmNewProject.Designer.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\frmNewProject.Designer.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="frmMain.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\frmMain.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="frmMain.Designer.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\frmMain.Designer.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Program.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Program.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="ProjectExportEGL.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\ProjectExportEGL.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Properties\Resources.Designer.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Properties\Settings.Designer.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Region.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Region.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Tileset.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Tileset.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="World.cs" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\World.cs">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Properties\Settings.settings" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\zoom_out.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\zoom_out.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\_bg.gif" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\_bg.gif">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\delete.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\delete.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\disk.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\disk.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\folder_database.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\folder_database.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\page.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\page.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\page_add.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\page_add.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\page_delete.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\page_delete.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\paintcan.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\paintcan.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\pencil.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\pencil.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\picture_add.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\picture_add.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\picture_delete.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\picture_delete.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\table_save.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\table_save.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\zoom.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\zoom.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\zoom_in.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\zoom_in.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="dsControle.xsc" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\dsControle.xsc">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="dsControle.xsd" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\dsControle.xsd">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="dsControle.xss" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\dsControle.xss">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\icon_walk.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\icon_walk.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\ico_visible.gif" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\ico_visible.gif">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\arrow_out.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\arrow_out.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\cross.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\cross.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\cicle.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\cicle.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\application_get.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\application_get.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\ico_grid.gif" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\ico_grid.gif">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\bg_dark.gif" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\bg_dark.gif">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\icon.gif" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\icon.gif">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\eraser.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\eraser.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\logo_c_branco.jpg" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\logo_c_branco.jpg">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\script.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\script.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\layers.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\layers.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\map_add.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\map_add.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\map_delete.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\map_delete.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\script_add.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\script_add.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\script_delete.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\script_delete.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\map_import.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\map_import.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Resources\map_export.png" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Resources\map_export.png">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="logo.ico" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\logo.ico">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="frmEvent.resx" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\frmEvent.resx">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="frmMain.resx" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\frmMain.resx">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="frmNewProject.resx" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\frmNewProject.resx">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="frmSobre.resx" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\frmSobre.resx">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="Properties\Resources.resx" Description="File successfully backed up as C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="EditorMapa2D.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="EditorMapa2D" Source="EditorMapa2D.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="EditorMapa2D.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="EditorMapa2D.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="EditorMapa2D" Source="EditorMapa2D.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -24,3 +24,9 @@ Novidades na versão 4
 * sistema de interface gráfica (com botões e menus)
 * desenho de retângulos com os cantos arredondados
 * desenho de linhas com possibilidade de determinar a espessura
+* novo sistema de interface gráfica: botões e itens de menu
+* possibilidade de interceptar o botão de fechar janela (usando eventos da interface gráfica)
+* BUG: foi corrigido o bug de recorte de imagens. Agora é possível carregar somente uma parte de uma imagem (testado somente em PNG)
+* TileMap: agora a libEGL carrega arquivos exportados do aplicativo Tiled (http://www.mapeditor.org/) em formato JSON
+
+> *Usando o Tiled:* para utilizar um mapa de tiles editado no Tiled, basta exportar uma versão no formato JSON. Para habilitar as colisões, deve-se adicionar um layer chamado exatamente "egl_colide" e deixar sem tiles as áreas que NÃO tem colisão (ver exemplo do Tanque). Nessa versão as infos de cada tile ainda não são suportadas.

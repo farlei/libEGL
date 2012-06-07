@@ -1,0 +1,12 @@
+C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\bin\Release\EditorMapa2D.exe
+C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\bin\Release\EditorMapa2D.pdb
+C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\obj\Release\EditorMapa2D.frmEvent.resources
+C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\obj\Release\EditorMapa2D.frmMain.resources
+C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\obj\Release\EditorMapa2D.frmNewProject.resources
+C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\obj\Release\EditorMapa2D.frmSobre.resources
+C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\obj\Release\EditorMapa2D.Properties.Resources.resources
+C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\obj\Release\ResGen.read.1.tlog
+C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\obj\Release\ResGen.write.1.tlog
+C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\obj\Release\EditorMapa2D.exe
+C:\Users\Farlei\Desktop\EGL4\libEGL4\libEGL\tools\EditorMap2D\obj\Release\EditorMapa2D.pdb

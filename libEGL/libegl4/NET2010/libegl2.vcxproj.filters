@@ -40,6 +40,9 @@
     <ClCompile Include="..\..\src\ItemMenu.cpp">
       <Filter>Interface</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\jsoncpp.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\TileEngine.h">

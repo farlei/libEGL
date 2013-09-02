@@ -114,6 +114,7 @@ public:
 	bool operator!=(const imagem &r);
 
 	SDL_Surface* obter_bitmap();
+	Uint32 obter_pixel(int x, int y, SDL_PixelFormat& pFormat);
 	void obter_tamanho(int &w, int &h);
 	void obter_dimensoes(int &altura, int &largura, unsigned int index);
 	int getResX();

@@ -6,12 +6,12 @@
 
 
 imagem::imagem()
-:index(-1), curr(0), vel(30), tempo(30), falha(false), type(0), decl_global(false)
+	:index(-1), curr(0), vel(30), tempo(30), falha(false), type(0), decl_global(false)
 {
 }
 
 imagem::imagem(const imagem& cp) // construtor de cópia
-: falha(false)
+	: falha(false)
 {
 	index = cp.index;
 	curr = cp.curr;
@@ -79,6 +79,42 @@ SDL_Surface* imagem::obter_bitmap()
 	return bmp[curr];
 }
 
+Uint32 imagem::obter_pixel(int x, int y, SDL_PixelFormat& pFormat)
+{
+	int w = getResX();
+	int h = getResY();
+	if( (x < 0) || (x >= w) ) return 0;
+	if( (y < 0) || (y >= h) ) return 0;
+
+	SDL_Surface* surface = obter_bitmap();
+	pFormat = *(surface->format);
+	int bpp = surface->format->BytesPerPixel;
+
+	Uint8 *p = (Uint8 *)surface->pixels + y * surface->pitch + x * bpp;
+
+	switch(bpp) 
+	{
+	case 1:
+		return *p;
+		break;
+
+	case 2:
+		return *(Uint16 *)p;
+		break;
+
+	case 3:
+		if(SDL_BYTEORDER == SDL_BIG_ENDIAN)
+			return p[0] << 16 | p[1] << 8 | p[2];
+		else
+			return p[0] | p[1] << 8 | p[2] << 16;
+		break;
+
+	case 4:
+		return *(Uint32 *)p;
+	}
+	return 0;
+}
+
 void imagem::obter_tamanho(int &w, int &h)
 {
 	if(!egl_init) return;
@@ -131,8 +167,8 @@ bool imagem::carregar(string arquivo, bool global)
 	index++;
 	SDL_Surface* btemp;
 	btemp = IMG_Load(arquivo.c_str());
-	
-	
+
+
 	if(!btemp) 
 	{
 		index--;
@@ -181,7 +217,7 @@ bool imagem::carregar(string arquivo, int x, int y, int largura, int altura)
 	}
 
 	btemp = SDL_CreateRGBSurface(SDL_SWSURFACE, largura, altura, 32, rmask, gmask, bmask, amask);
-	
+
 	SDL_Rect r_orig;
 	r_orig.x = x;
 	r_orig.y = y;
@@ -311,31 +347,31 @@ bool imagem::desenha_espelhado(int x, int y, bool horiz, bool vert)
 
 	if(falha)
 	{
-		egl_texto(falha_str,x,y,255,0,0);
-		return false;
+	egl_texto(falha_str,x,y,255,0,0);
+	return false;
 	}
 
 
 	if(horiz && vert)
 	{
-		draw_sprite_vh_flip(tela,bmp[curr],x,y);
+	draw_sprite_vh_flip(tela,bmp[curr],x,y);
 	}
 	else
 	{
-		if(horiz) draw_sprite_h_flip(tela,bmp[curr],x,y);
-		if(vert) draw_sprite_v_flip(tela,bmp[curr],x,y);
+	if(horiz) draw_sprite_h_flip(tela,bmp[curr],x,y);
+	if(vert) draw_sprite_v_flip(tela,bmp[curr],x,y);
 	}
 
 	tempo--;
 	if(!tempo)
 	{
-		curr++;
-		tempo = vel;
-		if(curr > index) 
-		{
-			curr = 0;
-			return false;
-		}
+	curr++;
+	tempo = vel;
+	if(curr > index) 
+	{
+	curr = 0;
+	return false;
+	}
 	}
 	*/
 	return true;
@@ -364,7 +400,7 @@ bool imagem::colide(int x1, int y1, int x2, int y2, imagem &sprite2)
 {
 	if(!egl_init) return false;
 	if(index < 0) return false;
-	
+
 	int w1 = bmp[curr]->w;
 	int h1 = bmp[curr]->h;
 

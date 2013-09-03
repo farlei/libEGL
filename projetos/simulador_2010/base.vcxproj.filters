@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="RoboLinha.cpp" />
+    <ClCompile Include="RoboBase.cpp">
+      <Filter>Simulador</Filter>
+    </ClCompile>
+    <ClCompile Include="Simulador.cpp">
+      <Filter>Simulador</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RoboLinha.h" />
+    <ClInclude Include="RoboBase.h">
+      <Filter>Simulador</Filter>
+    </ClInclude>
+    <ClInclude Include="Simulador.h">
+      <Filter>Simulador</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Simulador">
+      <UniqueIdentifier>{c56ae0b5-a8db-4087-a27c-29fc68b93fd9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

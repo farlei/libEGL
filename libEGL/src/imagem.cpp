@@ -81,15 +81,15 @@ SDL_Surface* imagem::obter_bitmap()
 
 Uint32 imagem::obter_pixel(int x, int y, SDL_PixelFormat& pFormat)
 {
+	SDL_Surface* surface = obter_bitmap();
+	pFormat = *(surface->format);
+
 	int w = getResX();
 	int h = getResY();
 	if( (x < 0) || (x >= w) ) return 0;
 	if( (y < 0) || (y >= h) ) return 0;
 
-	SDL_Surface* surface = obter_bitmap();
-	pFormat = *(surface->format);
 	int bpp = surface->format->BytesPerPixel;
-
 	Uint8 *p = (Uint8 *)surface->pixels + y * surface->pitch + x * bpp;
 
 	switch(bpp) 

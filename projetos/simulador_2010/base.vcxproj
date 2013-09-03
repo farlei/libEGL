@@ -92,6 +92,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RoboBase.cpp" />
+    <ClCompile Include="RoboLinha.cpp" />
+    <ClCompile Include="Simulador.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RoboBase.h" />
+    <ClInclude Include="RoboLinha.h" />
+    <ClInclude Include="Simulador.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

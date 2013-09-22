@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
 	egl_inicializar(800,600,true);
 
 	imagem mapa;
-	mapa.carregar("linha.png");
+	mapa.carregar("pista01.png");
 
 	RoboLinha rbtline(&mapa);
 	Simulador simulador;
@@ -24,6 +24,10 @@ int main(int argc, char* argv[])
 		mapa.desenha(0,0);
 
 		simulador.executaPasso();
+
+		if(key[SDLK_RETURN]) simulador.resume();
+		if(key[SDLK_SPACE]) simulador.pausa();
+		if(key[SDLK_r]) simulador.resetaTempo();
 
 		egl_desenha_frame();
 	}

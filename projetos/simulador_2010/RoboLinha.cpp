@@ -19,23 +19,29 @@ string RoboLinha::arquivoImagemRobo()
 
 void RoboLinha::comportamento()
 {
-	const float vp = 0.25;
+	const float vp = 15.9;
 	setarMotorDir(vp);
 	setarMotorEsq(vp);
 
-	if(sensor[0])
+	if(sensor[CENTRAL])
 	{
 		setarMotorDir(vp);
 		setarMotorEsq(vp);
 	}
-	if(sensor[2])
+	if(sensor[DIR])
 	{
 		setarMotorDir(0.0);
 		setarMotorEsq(vp);
 	}
-	if(sensor[1])
+	if(sensor[ESQ])
 	{
 		setarMotorDir(vp);
+		setarMotorEsq(0.0);
+	}
+
+	if(sensorCor == VERDE)
+	{
+		setarMotorDir(0.0);
 		setarMotorEsq(0.0);
 	}
 	

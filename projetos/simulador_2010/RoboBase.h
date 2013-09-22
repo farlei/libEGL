@@ -4,15 +4,27 @@
 #define toRAD PI / 180.0
 #define toDEG 180.0 / PI
 
+#define CENTRAL 0
+#define ESQ 1
+#define DIR 2
+#define EXT_ESQ 3
+#define EXT_DIR 4
+
+typedef enum cores_ 
+{
+	PRETO,
+	BRANCO,
+	VERDE,
+	AZUL,
+	VERMELHO
+} Cor ;
+
 #define NSENS 5
 
 class RoboBase
 {
-public:
-
-	float x,y;
-
 protected:
+	float x,y;
 
 	float dir; // angulo em radianos
 
@@ -22,6 +34,7 @@ protected:
 	float senx[NSENS];
 	float seny[NSENS];
 	bool sensor[NSENS];
+	Cor sensorCor;
 
 	int nSens;
 
@@ -32,10 +45,24 @@ protected:
 	imagem* snsOn;
 	imagem* snsOff;
 
+private:
+
+	bool objetivo;
+
 public:
 	RoboBase();
 	RoboBase(float px, float py, float dr, imagem* pamb);
 	~RoboBase();
+
+	void processaCor(Uint8 cr,Uint8 cg,Uint8 cb);
+	void mostraSensorCor(int cx, int cy);
+
+	void setPos(float px, float py);
+	void giraEsq();
+	void giraDir();
+	void zeraDir();
+	void resetaObjetivo();
+	bool objetivoAtingido();
 
 	void atualiza();
 	void desenha();

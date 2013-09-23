@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
 	egl_inicializar(800,600,true);
 
 	imagem mapa;
-	mapa.carregar("pista01.png");
+	mapa.carregar("pista03.png");
 
 	RoboLinha rbtline(&mapa);
 	Simulador simulador;

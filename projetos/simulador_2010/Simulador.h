@@ -9,6 +9,7 @@ protected:
 	bool pausado;
 	fonte texto;
 	long ticks, startTicks;
+	imagem help;
 
 public:
 	Simulador(void);

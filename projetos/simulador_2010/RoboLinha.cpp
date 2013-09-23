@@ -19,7 +19,7 @@ string RoboLinha::arquivoImagemRobo()
 
 void RoboLinha::comportamento()
 {
-	const float vp = 15.9;
+	const float vp = 2.0;
 	setarMotorDir(vp);
 	setarMotorEsq(vp);
 

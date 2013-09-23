@@ -14,6 +14,7 @@ Simulador::Simulador(void)
 {
 	pausado = true;
 	texto.carregar("digital.ttf",48);
+	help.carregar("help.jpg");
 	resetaTempo();
 }
 
@@ -103,4 +104,7 @@ void Simulador::executaPasso()
 	{
 		mostraTempo();
 	}
+
+	if(key[SDLK_F1]) help.desenha(0,0); 
+
 }

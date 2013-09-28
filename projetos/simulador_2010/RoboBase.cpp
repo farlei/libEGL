@@ -77,7 +77,7 @@ void RoboBase::processaCor(Uint8 cr,Uint8 cg,Uint8 cb)
 	sensorCor = PRETO;
 	if( (cr-delta > cg) && (cr-delta > cb) ) sensorCor = VERMELHO;
 	if( (cg-delta > cr) && (cg-delta > cb) ) sensorCor = VERDE;
-	if( (cb-delta > cg) && (cb-delta > cb) ) sensorCor = AZUL;
+	if( (cb-delta > cg) && (cb-delta > cr) ) sensorCor = AZUL;
 	if(sensorCor == PRETO)
 	{
 		float gray = 0.2126 * cr + 0.7152 * cg + 0.0722 * cb;
